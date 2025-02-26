@@ -2,6 +2,7 @@ import { Layout } from "antd";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
 
+import Container from "@/components/container";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Sider from "@/components/sider";
@@ -31,7 +32,9 @@ export default function RootLayout({
           <Layout>
             <Sider />
             <Layout>
-              <div className="contentWrap">{children}</div>
+              <div className="contentWrap">
+                <Container>{children}</Container>
+              </div>
               <Footer />
             </Layout>
           </Layout>

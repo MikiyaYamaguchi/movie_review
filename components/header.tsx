@@ -7,6 +7,8 @@ import Image from "next/image";
 
 const { Header } = Layout;
 
+import Link from "next/link";
+
 const HeaderParts = () => {
   const header = css`
     padding: 0;
@@ -37,15 +39,17 @@ const HeaderParts = () => {
   return (
     <Header css={header}>
       <div className="container">
-        <div className="logo">
-          <Image
-            src="logo_icon.svg"
-            alt="My Movie Review"
-            width={40}
-            height={40}
-          />
-          My Movie Review
-        </div>
+        <Link href="/" style={{ display: "inline-block" }}>
+          <div className="logo">
+            <Image
+              src="logo_icon.svg"
+              alt="My Movie Review"
+              width={40}
+              height={40}
+            />
+            My Movie Review
+          </div>
+        </Link>
       </div>
     </Header>
   );

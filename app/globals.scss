@@ -20,3 +20,20 @@
   padding: 24px;
   min-height: 360px;
 }
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+}
