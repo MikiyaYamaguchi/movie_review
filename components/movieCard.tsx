@@ -4,7 +4,11 @@
 import { css } from "@emotion/react";
 import { Card } from "antd";
 
+import Image from "next/image";
+
 import { StarTwoTone } from "@ant-design/icons";
+
+import dummyImage from "@/img/dummy_movie.jpg";
 
 import Link from "next/link";
 
@@ -27,7 +31,8 @@ const MovieCard = () => {
   `;
   return (
     <Link href="#">
-      <Card title="アベンジャーズ">
+      <Card cover={<Image alt="example" src={dummyImage} />}>
+        <p>アベンジャーズ</p>
         <p css={dateText}>2025.1.12</p>
         <div className="starWrap">
           <StarTwoTone twoToneColor="#ffa500" />
